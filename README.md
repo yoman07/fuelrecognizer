@@ -6,9 +6,9 @@ Tesseract OCR iOS 1.5 (iOS7 ready)
 It will help you to use OCR in a iOS project. Easy and fast.
 
 <br/>
-Template Framework Project
+Fuel Recognizer Project
 =================
-You can use the "**Template Framework Project**". It's a starting point for use the Tesseract Framework. It's iOS7 ready!
+You can use the "**Fuel Recognizer Project**". It's a starting point for use the Tesseract Framework. It's iOS7 ready!
 
 Alternatively you can create a **New Project** like explained below.
 
@@ -64,7 +64,7 @@ Updates in this version
 
 - iOS7 libstdc++ issue solved (using libstdc++.6.0.9). 
 
-- **Template Framework Project added.** It's the start point for use the Tesseract Framework. It's **iOS7** ready!
+- **Fuel Recognizer Project added.** It's the start point for use the Tesseract Framework. It's **iOS7** ready!
 
 - 11 october 2013, tesseract is up to date with last https://github.com/ldiqual/tesseract-ios version available.
 

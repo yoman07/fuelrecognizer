@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		390027F818636D9E00C08D27 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 390027F718636D9E00C08D27 /* TesseractOCR.framework */; };
+		3900280C1863707F00C08D27 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3900280B1863707F00C08D27 /* ImageIO.framework */; };
+		3900280E1863708400C08D27 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3900280D1863708400C08D27 /* CoreMedia.framework */; };
+		39174CDE1912B7F800A211CC /* bigphoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 39174CDB1912B7F800A211CC /* bigphoto.png */; };
+		39174CDF1912B7F800A211CC /* makefg.php-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 39174CDC1912B7F800A211CC /* makefg.php-2.png */; };
+		39174CE01912B7F800A211CC /* makefg.php.png in Resources */ = {isa = PBXBuildFile; fileRef = 39174CDD1912B7F800A211CC /* makefg.php.png */; };
+		39174CE21912B80B00A211CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39174CE11912B80B00A211CC /* Images.xcassets */; };
+		39174CE51912B86400A211CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 39174CE31912B86400A211CC /* InfoPlist.strings */; };
+		39174CFA1912BC1E00A211CC /* Fuel recognizer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39174CF91912BC1E00A211CC /* Fuel recognizer-Info.plist */; };
+		39174D001912BD8A00A211CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174CD71912B79500A211CC /* AppDelegate.m */; };
+		39174D111912BFA600A211CC /* ReceiptModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D0E1912BFA600A211CC /* ReceiptModel.m */; };
+		39174D121912BFA600A211CC /* ReceiptObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D101912BFA600A211CC /* ReceiptObject.m */; };
+		39174D1F1912BFE000A211CC /* DataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D1C1912BFE000A211CC /* DataTableViewController.m */; };
+		39174D201912BFE000A211CC /* G8ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D1E1912BFE000A211CC /* G8ViewController.m */; };
+		39174D271912C04700A211CC /* ProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D261912C04700A211CC /* ProductCell.m */; };
+		39174D441912C07200A211CC /* BezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D2B1912C07200A211CC /* BezierCurve.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		39174D451912C07200A211CC /* CatmullRomSpline.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D2D1912C07200A211CC /* CatmullRomSpline.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		39174D461912C07200A211CC /* CubicBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D301912C07200A211CC /* CubicBezierCurve.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		39174D471912C07200A211CC /* LinearBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D321912C07200A211CC /* LinearBezierCurve.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		39174D481912C07200A211CC /* NSArray_PointArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D341912C07200A211CC /* NSArray_PointArray.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		39174D491912C07200A211CC /* QuadraticBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D361912C07200A211CC /* QuadraticBezierCurve.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		39174D4A1912C07200A211CC /* Spline.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D381912C07200A211CC /* Spline.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		39174D4B1912C07200A211CC /* ImageFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D3A1912C07200A211CC /* ImageFilter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		39174D4C1912C07200A211CC /* ImageProcessingImplementation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 39174D3C1912C07200A211CC /* ImageProcessingImplementation.mm */; };
+		39174D4D1912C07200A211CC /* ImageProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 39174D3E1912C07200A211CC /* ImageProcessor.cpp */; };
+		39174D4E1912C07200A211CC /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 39174D411912C07200A211CC /* UIImage+OpenCV.mm */; };
+		39174D4F1912C07200A211CC /* UIImage+operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D431912C07200A211CC /* UIImage+operation.m */; };
+		39174D501912C08C00A211CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39174D211912C03700A211CC /* Main.storyboard */; };
+		39174D521912C0A500A211CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D511912C0A500A211CC /* main.m */; };
+		39E06C9E18F3E2EA00D86D2E /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397A1131187BF645003772C2 /* opencv2.framework */; };
+		6400DDD9180C5DE000443362 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDD8180C5DE000443362 /* Foundation.framework */; };
+		6400DDDB180C5DE000443362 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDDA180C5DE000443362 /* CoreGraphics.framework */; };
+		6400DDDD180C5DE000443362 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDDC180C5DE000443362 /* UIKit.framework */; };
+		64E40AB1180C6D4D00C36DDE /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E40AB0180C6D4D00C36DDE /* libstdc++.6.0.9.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		390027F718636D9E00C08D27 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = ../Products/TesseractOCR.framework; sourceTree = "<group>"; };
+		3900280B1863707F00C08D27 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		3900280D1863708400C08D27 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		39174CD61912B79500A211CC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "Fuel Recognizer Project/Application/AppDelegate.h"; sourceTree = SOURCE_ROOT; };
+		39174CD71912B79500A211CC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "Fuel Recognizer Project/Application/AppDelegate.m"; sourceTree = SOURCE_ROOT; };
+		39174CDB1912B7F800A211CC /* bigphoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigphoto.png; sourceTree = "<group>"; };
+		39174CDC1912B7F800A211CC /* makefg.php-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "makefg.php-2.png"; sourceTree = "<group>"; };
+		39174CDD1912B7F800A211CC /* makefg.php.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = makefg.php.png; sourceTree = "<group>"; };
+		39174CE11912B80B00A211CC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Fuel Recognizer Project/Resources/Images.xcassets"; sourceTree = SOURCE_ROOT; };
+		39174CE41912B86400A211CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "Fuel Recognizer Project/en.lproj/InfoPlist.strings"; sourceTree = SOURCE_ROOT; };
+		39174CEC1912B9E700A211CC /* Fuel recognizer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Fuel recognizer-Prefix.pch"; path = "Fuel Recognizer Project/Fuel recognizer-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		39174CF41912BB8000A211CC /* eng.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; name = eng.traineddata; path = ../../../TesseractOCR/tessdata/eng.traineddata; sourceTree = "<group>"; };
+		39174CF51912BB8000A211CC /* equ.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; name = equ.traineddata; path = ../../../TesseractOCR/tessdata/equ.traineddata; sourceTree = "<group>"; };
+		39174CF61912BB8000A211CC /* grc.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; name = grc.traineddata; path = ../../../TesseractOCR/tessdata/grc.traineddata; sourceTree = "<group>"; };
+		39174CF71912BB8000A211CC /* ita.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; name = ita.traineddata; path = ../../../TesseractOCR/tessdata/ita.traineddata; sourceTree = "<group>"; };
+		39174CF81912BB8000A211CC /* pol.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; name = pol.traineddata; path = ../../../TesseractOCR/tessdata/pol.traineddata; sourceTree = "<group>"; };
+		39174CF91912BC1E00A211CC /* Fuel recognizer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Fuel recognizer-Info.plist"; path = "Fuel Recognizer Project/Fuel recognizer-Info.plist"; sourceTree = SOURCE_ROOT; };
+		39174D0D1912BFA600A211CC /* ReceiptModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiptModel.h; sourceTree = "<group>"; };
+		39174D0E1912BFA600A211CC /* ReceiptModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiptModel.m; sourceTree = "<group>"; };
+		39174D0F1912BFA600A211CC /* ReceiptObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiptObject.h; sourceTree = "<group>"; };
+		39174D101912BFA600A211CC /* ReceiptObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiptObject.m; sourceTree = "<group>"; };
+		39174D141912BFCD00A211CC /* NSString+Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Score.h"; sourceTree = "<group>"; };
+		39174D151912BFCD00A211CC /* NSString+Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Score.m"; sourceTree = "<group>"; };
+		39174D161912BFCD00A211CC /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixOrientation.h"; sourceTree = "<group>"; };
+		39174D171912BFCD00A211CC /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixOrientation.m"; sourceTree = "<group>"; };
+		39174D1B1912BFE000A211CC /* DataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTableViewController.h; sourceTree = "<group>"; };
+		39174D1C1912BFE000A211CC /* DataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTableViewController.m; sourceTree = "<group>"; };
+		39174D1D1912BFE000A211CC /* G8ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G8ViewController.h; sourceTree = "<group>"; };
+		39174D1E1912BFE000A211CC /* G8ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G8ViewController.m; sourceTree = "<group>"; };
+		39174D221912C03700A211CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		39174D251912C04700A211CC /* ProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCell.h; sourceTree = "<group>"; };
+		39174D261912C04700A211CC /* ProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCell.m; sourceTree = "<group>"; };
+		39174D2A1912C07200A211CC /* BezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierCurve.h; sourceTree = "<group>"; };
+		39174D2B1912C07200A211CC /* BezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierCurve.m; sourceTree = "<group>"; };
+		39174D2C1912C07200A211CC /* CatmullRomSpline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatmullRomSpline.h; sourceTree = "<group>"; };
+		39174D2D1912C07200A211CC /* CatmullRomSpline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatmullRomSpline.m; sourceTree = "<group>"; };
+		39174D2E1912C07200A211CC /* CGPointArithmetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPointArithmetic.h; sourceTree = "<group>"; };
+		39174D2F1912C07200A211CC /* CubicBezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubicBezierCurve.h; sourceTree = "<group>"; };
+		39174D301912C07200A211CC /* CubicBezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubicBezierCurve.m; sourceTree = "<group>"; };
+		39174D311912C07200A211CC /* LinearBezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearBezierCurve.h; sourceTree = "<group>"; };
+		39174D321912C07200A211CC /* LinearBezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinearBezierCurve.m; sourceTree = "<group>"; };
+		39174D331912C07200A211CC /* NSArray_PointArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArray_PointArray.h; sourceTree = "<group>"; };
+		39174D341912C07200A211CC /* NSArray_PointArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_PointArray.m; sourceTree = "<group>"; };
+		39174D351912C07200A211CC /* QuadraticBezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticBezierCurve.h; sourceTree = "<group>"; };
+		39174D361912C07200A211CC /* QuadraticBezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticBezierCurve.m; sourceTree = "<group>"; };
+		39174D371912C07200A211CC /* Spline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spline.h; sourceTree = "<group>"; };
+		39174D381912C07200A211CC /* Spline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spline.m; sourceTree = "<group>"; };
+		39174D391912C07200A211CC /* ImageFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageFilter.h; sourceTree = "<group>"; };
+		39174D3A1912C07200A211CC /* ImageFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageFilter.m; sourceTree = "<group>"; };
+		39174D3B1912C07200A211CC /* ImageProcessingImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessingImplementation.h; sourceTree = "<group>"; };
+		39174D3C1912C07200A211CC /* ImageProcessingImplementation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageProcessingImplementation.mm; sourceTree = "<group>"; };
+		39174D3D1912C07200A211CC /* ImageProcessingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessingProtocol.h; sourceTree = "<group>"; };
+		39174D3E1912C07200A211CC /* ImageProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageProcessor.cpp; sourceTree = "<group>"; };
+		39174D3F1912C07200A211CC /* ImageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessor.h; sourceTree = "<group>"; };
+		39174D401912C07200A211CC /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
+		39174D411912C07200A211CC /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
+		39174D421912C07200A211CC /* UIImage+operation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+operation.h"; sourceTree = "<group>"; };
+		39174D431912C07200A211CC /* UIImage+operation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+operation.m"; sourceTree = "<group>"; };
+		39174D511912C0A500A211CC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Fuel Recognizer Project/main.m"; sourceTree = SOURCE_ROOT; };
+		397A1131187BF645003772C2 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../Products/opencv2.framework; sourceTree = "<group>"; };
+		6400DDD5180C5DE000443362 /* Fuel recognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fuel recognizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6400DDD8180C5DE000443362 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6400DDDA180C5DE000443362 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6400DDDC180C5DE000443362 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6400DDF7180C5DE000443362 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		64E40AB0180C6D4D00C36DDE /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6400DDD2180C5DE000443362 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39E06C9E18F3E2EA00D86D2E /* opencv2.framework in Frameworks */,
+				3900280E1863708400C08D27 /* CoreMedia.framework in Frameworks */,
+				3900280C1863707F00C08D27 /* ImageIO.framework in Frameworks */,
+				390027F818636D9E00C08D27 /* TesseractOCR.framework in Frameworks */,
+				64E40AB1180C6D4D00C36DDE /* libstdc++.6.0.9.dylib in Frameworks */,
+				6400DDDB180C5DE000443362 /* CoreGraphics.framework in Frameworks */,
+				6400DDDD180C5DE000443362 /* UIKit.framework in Frameworks */,
+				6400DDD9180C5DE000443362 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		39174CC91912B68B00A211CC /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				39174CD61912B79500A211CC /* AppDelegate.h */,
+				39174CD71912B79500A211CC /* AppDelegate.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		39174CD91912B7DC00A211CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				39174CE11912B80B00A211CC /* Images.xcassets */,
+				39174CDA1912B7DC00A211CC /* Images */,
+			);
+			name = Resources;
+			path = "Fuel Recognizer Project/Resources";
+			sourceTree = SOURCE_ROOT;
+		};
+		39174CDA1912B7DC00A211CC /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				39174CDB1912B7F800A211CC /* bigphoto.png */,
+				39174CDC1912B7F800A211CC /* makefg.php-2.png */,
+				39174CDD1912B7F800A211CC /* makefg.php.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		39174D0C1912BFA600A211CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				39174D0D1912BFA600A211CC /* ReceiptModel.h */,
+				39174D0E1912BFA600A211CC /* ReceiptModel.m */,
+				39174D0F1912BFA600A211CC /* ReceiptObject.h */,
+				39174D101912BFA600A211CC /* ReceiptObject.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		39174D131912BFCD00A211CC /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				39174D141912BFCD00A211CC /* NSString+Score.h */,
+				39174D151912BFCD00A211CC /* NSString+Score.m */,
+				39174D161912BFCD00A211CC /* UIImage+FixOrientation.h */,
+				39174D171912BFCD00A211CC /* UIImage+FixOrientation.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		39174D1A1912BFE000A211CC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				39174D1B1912BFE000A211CC /* DataTableViewController.h */,
+				39174D1C1912BFE000A211CC /* DataTableViewController.m */,
+				39174D1D1912BFE000A211CC /* G8ViewController.h */,
+				39174D1E1912BFE000A211CC /* G8ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		39174D241912C04700A211CC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				39174D251912C04700A211CC /* ProductCell.h */,
+				39174D261912C04700A211CC /* ProductCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		39174D281912C07200A211CC /* ImageProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				39174D291912C07200A211CC /* Curve */,
+				39174D391912C07200A211CC /* ImageFilter.h */,
+				39174D3A1912C07200A211CC /* ImageFilter.m */,
+				39174D3B1912C07200A211CC /* ImageProcessingImplementation.h */,
+				39174D3C1912C07200A211CC /* ImageProcessingImplementation.mm */,
+				39174D3D1912C07200A211CC /* ImageProcessingProtocol.h */,
+				39174D3E1912C07200A211CC /* ImageProcessor.cpp */,
+				39174D3F1912C07200A211CC /* ImageProcessor.h */,
+				39174D401912C07200A211CC /* UIImage+OpenCV.h */,
+				39174D411912C07200A211CC /* UIImage+OpenCV.mm */,
+				39174D421912C07200A211CC /* UIImage+operation.h */,
+				39174D431912C07200A211CC /* UIImage+operation.m */,
+			);
+			path = ImageProcessing;
+			sourceTree = "<group>";
+		};
+		39174D291912C07200A211CC /* Curve */ = {
+			isa = PBXGroup;
+			children = (
+				39174D2A1912C07200A211CC /* BezierCurve.h */,
+				39174D2B1912C07200A211CC /* BezierCurve.m */,
+				39174D2C1912C07200A211CC /* CatmullRomSpline.h */,
+				39174D2D1912C07200A211CC /* CatmullRomSpline.m */,
+				39174D2E1912C07200A211CC /* CGPointArithmetic.h */,
+				39174D2F1912C07200A211CC /* CubicBezierCurve.h */,
+				39174D301912C07200A211CC /* CubicBezierCurve.m */,
+				39174D311912C07200A211CC /* LinearBezierCurve.h */,
+				39174D321912C07200A211CC /* LinearBezierCurve.m */,
+				39174D331912C07200A211CC /* NSArray_PointArray.h */,
+				39174D341912C07200A211CC /* NSArray_PointArray.m */,
+				39174D351912C07200A211CC /* QuadraticBezierCurve.h */,
+				39174D361912C07200A211CC /* QuadraticBezierCurve.m */,
+				39174D371912C07200A211CC /* Spline.h */,
+				39174D381912C07200A211CC /* Spline.m */,
+			);
+			path = Curve;
+			sourceTree = "<group>";
+		};
+		6400DDCC180C5DE000443362 = {
+			isa = PBXGroup;
+			children = (
+				6400DDDE180C5DE000443362 /* FuelRecognizer */,
+				6400DDD7180C5DE000443362 /* Frameworks */,
+				6400DDD6180C5DE000443362 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6400DDD6180C5DE000443362 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6400DDD5180C5DE000443362 /* Fuel recognizer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6400DDD7180C5DE000443362 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3900280D1863708400C08D27 /* CoreMedia.framework */,
+				3900280B1863707F00C08D27 /* ImageIO.framework */,
+				64E40AB0180C6D4D00C36DDE /* libstdc++.6.0.9.dylib */,
+				397A1131187BF645003772C2 /* opencv2.framework */,
+				390027F718636D9E00C08D27 /* TesseractOCR.framework */,
+				6400DDD8180C5DE000443362 /* Foundation.framework */,
+				6400DDDA180C5DE000443362 /* CoreGraphics.framework */,
+				6400DDDC180C5DE000443362 /* UIKit.framework */,
+				6400DDF7180C5DE000443362 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6400DDDE180C5DE000443362 /* FuelRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				39174D281912C07200A211CC /* ImageProcessing */,
+				39174D241912C04700A211CC /* Views */,
+				39174D211912C03700A211CC /* Main.storyboard */,
+				39174D1A1912BFE000A211CC /* Controllers */,
+				39174D131912BFCD00A211CC /* Categories */,
+				39174D0C1912BFA600A211CC /* Models */,
+				39174CC91912B68B00A211CC /* Application */,
+				6400DDDF180C5DE000443362 /* Supporting Files */,
+				6400DE18180C5FBE00443362 /* tessdata */,
+			);
+			name = FuelRecognizer;
+			path = "Fuel Recognizer Project";
+			sourceTree = "<group>";
+		};
+		6400DDDF180C5DE000443362 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				39174D511912C0A500A211CC /* main.m */,
+				39174CF91912BC1E00A211CC /* Fuel recognizer-Info.plist */,
+				39174CEC1912B9E700A211CC /* Fuel recognizer-Prefix.pch */,
+				39174CE31912B86400A211CC /* InfoPlist.strings */,
+				39174CD91912B7DC00A211CC /* Resources */,
+			);
+			name = "Supporting Files";
+			path = "Fuel Recognizer Project/Supporting Files";
+			sourceTree = "<group>";
+		};
+		6400DE18180C5FBE00443362 /* tessdata */ = {
+			isa = PBXGroup;
+			children = (
+				39174CF41912BB8000A211CC /* eng.traineddata */,
+				39174CF51912BB8000A211CC /* equ.traineddata */,
+				39174CF61912BB8000A211CC /* grc.traineddata */,
+				39174CF71912BB8000A211CC /* ita.traineddata */,
+				39174CF81912BB8000A211CC /* pol.traineddata */,
+			);
+			name = tessdata;
+			path = ../TesseractOCR/tessdata;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6400DDD4180C5DE000443362 /* Fuel recognizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6400DE07180C5DE100443362 /* Build configuration list for PBXNativeTarget "Fuel recognizer" */;
+			buildPhases = (
+				6400DDD1180C5DE000443362 /* Sources */,
+				6400DDD2180C5DE000443362 /* Frameworks */,
+				6400DDD3180C5DE000443362 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fuel recognizer";
+			productName = "Fuel Recognizer Project";
+			productReference = 6400DDD5180C5DE000443362 /* Fuel recognizer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6400DDCD180C5DE000443362 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RB;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Roman Barzyczak";
+			};
+			buildConfigurationList = 6400DDD0180C5DE000443362 /* Build configuration list for PBXProject "Fuel recognizer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6400DDCC180C5DE000443362;
+			productRefGroup = 6400DDD6180C5DE000443362 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6400DDD4180C5DE000443362 /* Fuel recognizer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6400DDD3180C5DE000443362 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39174D501912C08C00A211CC /* Main.storyboard in Resources */,
+				39174CE51912B86400A211CC /* InfoPlist.strings in Resources */,
+				39174CDF1912B7F800A211CC /* makefg.php-2.png in Resources */,
+				39174CE21912B80B00A211CC /* Images.xcassets in Resources */,
+				39174CFA1912BC1E00A211CC /* Fuel recognizer-Info.plist in Resources */,
+				39174CE01912B7F800A211CC /* makefg.php.png in Resources */,
+				39174CDE1912B7F800A211CC /* bigphoto.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6400DDD1180C5DE000443362 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39174D4C1912C07200A211CC /* ImageProcessingImplementation.mm in Sources */,
+				39174D441912C07200A211CC /* BezierCurve.m in Sources */,
+				39174D461912C07200A211CC /* CubicBezierCurve.m in Sources */,
+				39174D201912BFE000A211CC /* G8ViewController.m in Sources */,
+				39174D4E1912C07200A211CC /* UIImage+OpenCV.mm in Sources */,
+				39174D121912BFA600A211CC /* ReceiptObject.m in Sources */,
+				39174D271912C04700A211CC /* ProductCell.m in Sources */,
+				39174D1F1912BFE000A211CC /* DataTableViewController.m in Sources */,
+				39174D521912C0A500A211CC /* main.m in Sources */,
+				39174D001912BD8A00A211CC /* AppDelegate.m in Sources */,
+				39174D481912C07200A211CC /* NSArray_PointArray.m in Sources */,
+				39174D471912C07200A211CC /* LinearBezierCurve.m in Sources */,
+				39174D491912C07200A211CC /* QuadraticBezierCurve.m in Sources */,
+				39174D451912C07200A211CC /* CatmullRomSpline.m in Sources */,
+				39174D4D1912C07200A211CC /* ImageProcessor.cpp in Sources */,
+				39174D111912BFA600A211CC /* ReceiptModel.m in Sources */,
+				39174D4F1912C07200A211CC /* UIImage+operation.m in Sources */,
+				39174D4A1912C07200A211CC /* Spline.m in Sources */,
+				39174D4B1912C07200A211CC /* ImageFilter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		39174CE31912B86400A211CC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39174CE41912B86400A211CC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		39174D211912C03700A211CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39174D221912C03700A211CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6400DE05180C5DE100443362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = "-lstdc++";
+				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Debug;
+		};
+		6400DE06180C5DE100443362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = "-lstdc++";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Release;
+		};
+		6400DE08180C5DE100443362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/yoman/Documents/iOS/libraries/Tesseract-OCR-iOS/Products",
+					"/Users/yoman/Documents/myProjects/mgr/mgr/Tesseract-OCR-iOS/Products",
+					/Users/yoman/Documents/myProjects/mgr/mgr/FuelRecognizer/Products,
+					/Users/yoman/Documents/myProjects/FuelRecognizer/Products,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fuel Recognizer Project/Fuel recognizer-Prefix.pch";
+				INFOPLIST_FILE = "Fuel Recognizer Project/Fuel recognizer-Info.plist";
+				PRODUCT_NAME = "Fuel recognizer";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6400DE09180C5DE100443362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/yoman/Documents/iOS/libraries/Tesseract-OCR-iOS/Products",
+					"/Users/yoman/Documents/myProjects/mgr/mgr/Tesseract-OCR-iOS/Products",
+					/Users/yoman/Documents/myProjects/mgr/mgr/FuelRecognizer/Products,
+					/Users/yoman/Documents/myProjects/FuelRecognizer/Products,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fuel Recognizer Project/Fuel recognizer-Prefix.pch";
+				INFOPLIST_FILE = "Fuel Recognizer Project/Fuel recognizer-Info.plist";
+				PRODUCT_NAME = "Fuel recognizer";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6400DDD0180C5DE000443362 /* Build configuration list for PBXProject "Fuel recognizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6400DE05180C5DE100443362 /* Debug */,
+				6400DE06180C5DE100443362 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6400DE07180C5DE100443362 /* Build configuration list for PBXNativeTarget "Fuel recognizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6400DE08180C5DE100443362 /* Debug */,
+				6400DE09180C5DE100443362 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6400DDCD180C5DE000443362 /* Project object */;
+}
