@@ -13,6 +13,7 @@
 @interface RBHistoryTableViewController ()
 
 @property (nonatomic,strong)NSArray* fetchedRecordsArray;
+@property (nonatomic,strong)NSMutableArray* burningArray;
 @property (weak, nonatomic) IBOutlet UILabel *meanBurning;
 @end
 
@@ -27,6 +28,13 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (NSMutableArray *) burningArray {
+    if(_burningArray == nil) {
+        _burningArray = [[NSMutableArray alloc] init];
+    }
+    return _burningArray;
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -59,15 +67,15 @@
     cell.productName.text = record.name;
 
     cell.productyQuantityLabel.text = [NSString stringWithFormat:@"%.2f",[record.amount doubleValue]];
-    cell.valueLabel.text = [NSString stringWithFormat:@"%.2f",[record.totalPrice doubleValue]];
-    cell.mediumBurning.text = [NSString stringWithFormat:@"%.2f",[record.dashboardValue doubleValue]];
-
+    cell.valueLabel.text = [NSString stringWithFormat:@"%.2f zł",[record.totalPrice doubleValue]];
+    cell.distanceLabel.text = [NSString stringWithFormat:@"%.2f km",[record.dashboardValue doubleValue]];
+    cell.burningLabel.text = [NSString stringWithFormat:@"%.2fL", [[self.burningArray objectAtIndex:indexPath.row] doubleValue]];
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView
 heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 95;
+    return 71;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -88,6 +96,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
         self.fetchedRecordsArray = arr;
         [appDelegate.managedObjectContext deleteObject:fuelEntity];
         [appDelegate.managedObjectContext save:nil];
+        [self.burningArray removeObjectAtIndex:indexPath.row];
         [self reloadData];
 
     }
@@ -107,11 +116,15 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
         }
         lastValue = [entity.dashboardValue doubleValue];
         amount += [entity.amount doubleValue];
+        
+        double singleBurning = [entity.amount doubleValue];
+        
+        [self.burningArray addObject:@(singleBurning)];
     }
     
     double meanBurning = distance/amount;
     
-    self.meanBurning.text = [NSString stringWithFormat:@"%.2f l/100km", meanBurning];
+    self.meanBurning.text = [NSString stringWithFormat:@"%.2f", meanBurning];
     [self.tableView reloadData];
 }
 

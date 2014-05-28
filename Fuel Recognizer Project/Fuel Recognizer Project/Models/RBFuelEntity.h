@@ -16,5 +16,4 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * dashboardValue;
 @property (nonatomic, retain) NSNumber * amount;
-
 @end
