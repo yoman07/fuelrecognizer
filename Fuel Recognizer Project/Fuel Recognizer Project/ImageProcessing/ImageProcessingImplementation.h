@@ -11,8 +11,12 @@
 
 @interface ImageProcessingImplementation : NSObject <ImageProcessingProtocol>
 
-- (UIImage*)processImage:(UIImage*) src;
-- (NSString*)OCRImage:(UIImage*) src;
-- (NSString*)pathToLanguageFile;
+- (UIImage *) imageWithCVMat:(cv::Mat&)res;
+cv::Mat calculateAndRotateAngle(cv::Mat& res, cv::Mat &dst);
+cv::Mat findBoxes(cv::Mat& src, cv::Mat& dst);
+cv::Mat thresholdImage(cv::Mat source);
+cv::Mat greyscale(cv::Mat source);
+cv::Mat processImage(cv::Mat source);
+cv::Mat findContoursAndCrop(cv::Mat mat);
 
 @end

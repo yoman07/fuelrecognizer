@@ -19,8 +19,7 @@
 		39174D001912BD8A00A211CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174CD71912B79500A211CC /* AppDelegate.m */; };
 		39174D111912BFA600A211CC /* ReceiptModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D0E1912BFA600A211CC /* ReceiptModel.m */; };
 		39174D121912BFA600A211CC /* ReceiptObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D101912BFA600A211CC /* ReceiptObject.m */; };
-		39174D1F1912BFE000A211CC /* DataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D1C1912BFE000A211CC /* DataTableViewController.m */; };
-		39174D201912BFE000A211CC /* G8ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D1E1912BFE000A211CC /* G8ViewController.m */; };
+		39174D201912BFE000A211CC /* G8ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 39174D1E1912BFE000A211CC /* G8ViewController.mm */; };
 		39174D271912C04700A211CC /* ProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D261912C04700A211CC /* ProductCell.m */; };
 		39174D441912C07200A211CC /* BezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D2B1912C07200A211CC /* BezierCurve.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		39174D451912C07200A211CC /* CatmullRomSpline.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D2D1912C07200A211CC /* CatmullRomSpline.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -36,17 +35,169 @@
 		39174D4F1912C07200A211CC /* UIImage+operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D431912C07200A211CC /* UIImage+operation.m */; };
 		39174D501912C08C00A211CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39174D211912C03700A211CC /* Main.storyboard */; };
 		39174D521912C0A500A211CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D511912C0A500A211CC /* main.m */; };
+		39174D551912E4C800A211CC /* ImageProcessingImplementation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 39174D3C1912C07200A211CC /* ImageProcessingImplementation.mm */; };
+		39174D561912E4C800A211CC /* BezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D2B1912C07200A211CC /* BezierCurve.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		39174D571912E4C800A211CC /* CubicBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D301912C07200A211CC /* CubicBezierCurve.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		39174D581912E4C800A211CC /* G8ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 39174D1E1912BFE000A211CC /* G8ViewController.mm */; };
+		39174D591912E4C800A211CC /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 39174D411912C07200A211CC /* UIImage+OpenCV.mm */; };
+		39174D5A1912E4C800A211CC /* ReceiptObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D101912BFA600A211CC /* ReceiptObject.m */; };
+		39174D5B1912E4C800A211CC /* ProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D261912C04700A211CC /* ProductCell.m */; };
+		39174D5D1912E4C800A211CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D511912C0A500A211CC /* main.m */; };
+		39174D5E1912E4C800A211CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174CD71912B79500A211CC /* AppDelegate.m */; };
+		39174D5F1912E4C800A211CC /* NSArray_PointArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D341912C07200A211CC /* NSArray_PointArray.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		39174D601912E4C800A211CC /* LinearBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D321912C07200A211CC /* LinearBezierCurve.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		39174D611912E4C800A211CC /* QuadraticBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D361912C07200A211CC /* QuadraticBezierCurve.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		39174D621912E4C800A211CC /* CatmullRomSpline.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D2D1912C07200A211CC /* CatmullRomSpline.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		39174D631912E4C800A211CC /* ImageProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 39174D3E1912C07200A211CC /* ImageProcessor.cpp */; };
+		39174D641912E4C800A211CC /* ReceiptModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D0E1912BFA600A211CC /* ReceiptModel.m */; };
+		39174D651912E4C800A211CC /* UIImage+operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D431912C07200A211CC /* UIImage+operation.m */; };
+		39174D661912E4C800A211CC /* Spline.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D381912C07200A211CC /* Spline.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		39174D671912E4C800A211CC /* ImageFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D3A1912C07200A211CC /* ImageFilter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		39174D691912E4C800A211CC /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397A1131187BF645003772C2 /* opencv2.framework */; };
+		39174D6A1912E4C800A211CC /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3900280D1863708400C08D27 /* CoreMedia.framework */; };
+		39174D6B1912E4C800A211CC /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3900280B1863707F00C08D27 /* ImageIO.framework */; };
+		39174D6C1912E4C800A211CC /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 390027F718636D9E00C08D27 /* TesseractOCR.framework */; };
+		39174D6D1912E4C800A211CC /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E40AB0180C6D4D00C36DDE /* libstdc++.6.0.9.dylib */; };
+		39174D6E1912E4C800A211CC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDDA180C5DE000443362 /* CoreGraphics.framework */; };
+		39174D6F1912E4C800A211CC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDDC180C5DE000443362 /* UIKit.framework */; };
+		39174D701912E4C800A211CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDD8180C5DE000443362 /* Foundation.framework */; };
+		39174D721912E4C800A211CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39174D211912C03700A211CC /* Main.storyboard */; };
+		39174D731912E4C800A211CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 39174CE31912B86400A211CC /* InfoPlist.strings */; };
+		39174D741912E4C800A211CC /* makefg.php-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 39174CDC1912B7F800A211CC /* makefg.php-2.png */; };
+		39174D751912E4C800A211CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39174CE11912B80B00A211CC /* Images.xcassets */; };
+		39174D761912E4C800A211CC /* Fuel recognizer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39174CF91912BC1E00A211CC /* Fuel recognizer-Info.plist */; };
+		39174D771912E4C800A211CC /* makefg.php.png in Resources */ = {isa = PBXBuildFile; fileRef = 39174CDD1912B7F800A211CC /* makefg.php.png */; };
+		39174D781912E4C800A211CC /* bigphoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 39174CDB1912B7F800A211CC /* bigphoto.png */; };
+		3929BF9D191D716000924B1C /* RBResearchMainClass.mm in Sources */ = {isa = PBXBuildFile; fileRef = 395020C21913D83A000C43DA /* RBResearchMainClass.mm */; };
+		3929BF9E191D716000924B1C /* RBResearchMainClass.mm in Sources */ = {isa = PBXBuildFile; fileRef = 395020C21913D83A000C43DA /* RBResearchMainClass.mm */; };
+		393B1EFB1931EAE700A55AFA /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1EF41931EAE700A55AFA /* TPKeyboardAvoidingCollectionView.m */; };
+		393B1EFC1931EAE700A55AFA /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1EF41931EAE700A55AFA /* TPKeyboardAvoidingCollectionView.m */; };
+		393B1EFD1931EAE700A55AFA /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1EF41931EAE700A55AFA /* TPKeyboardAvoidingCollectionView.m */; };
+		393B1EFE1931EAE700A55AFA /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1EF41931EAE700A55AFA /* TPKeyboardAvoidingCollectionView.m */; };
+		393B1EFF1931EAE700A55AFA /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1EF61931EAE700A55AFA /* TPKeyboardAvoidingScrollView.m */; };
+		393B1F001931EAE700A55AFA /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1EF61931EAE700A55AFA /* TPKeyboardAvoidingScrollView.m */; };
+		393B1F011931EAE700A55AFA /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1EF61931EAE700A55AFA /* TPKeyboardAvoidingScrollView.m */; };
+		393B1F021931EAE700A55AFA /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1EF61931EAE700A55AFA /* TPKeyboardAvoidingScrollView.m */; };
+		393B1F031931EAE700A55AFA /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1EF81931EAE700A55AFA /* TPKeyboardAvoidingTableView.m */; };
+		393B1F041931EAE700A55AFA /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1EF81931EAE700A55AFA /* TPKeyboardAvoidingTableView.m */; };
+		393B1F051931EAE700A55AFA /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1EF81931EAE700A55AFA /* TPKeyboardAvoidingTableView.m */; };
+		393B1F061931EAE700A55AFA /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1EF81931EAE700A55AFA /* TPKeyboardAvoidingTableView.m */; };
+		393B1F071931EAE700A55AFA /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1EFA1931EAE700A55AFA /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		393B1F081931EAE700A55AFA /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1EFA1931EAE700A55AFA /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		393B1F091931EAE700A55AFA /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1EFA1931EAE700A55AFA /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		393B1F0A1931EAE700A55AFA /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1EFA1931EAE700A55AFA /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		393B1F0C1931EBFB00A55AFA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393B1F0B1931EBFB00A55AFA /* CoreData.framework */; };
+		393B1F0F1931EC1100A55AFA /* FuelModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 393B1F0D1931EC1100A55AFA /* FuelModel.xcdatamodeld */; };
+		393B1F101931EC1100A55AFA /* FuelModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 393B1F0D1931EC1100A55AFA /* FuelModel.xcdatamodeld */; };
+		393B1F111931EC1100A55AFA /* FuelModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 393B1F0D1931EC1100A55AFA /* FuelModel.xcdatamodeld */; };
+		393B1F121931EC1100A55AFA /* FuelModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 393B1F0D1931EC1100A55AFA /* FuelModel.xcdatamodeld */; };
+		393B1F151931EF7C00A55AFA /* RBFuelEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1F141931EF7C00A55AFA /* RBFuelEntity.m */; };
+		393B1F161931EF7C00A55AFA /* RBFuelEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1F141931EF7C00A55AFA /* RBFuelEntity.m */; };
+		393B1F171931EF7C00A55AFA /* RBFuelEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1F141931EF7C00A55AFA /* RBFuelEntity.m */; };
+		393B1F181931EF7C00A55AFA /* RBFuelEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1F141931EF7C00A55AFA /* RBFuelEntity.m */; };
+		393B1F1B1931F2D400A55AFA /* RBHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1F1A1931F2D400A55AFA /* RBHistoryTableViewController.m */; };
+		393B1F1C1931F2D400A55AFA /* RBHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1F1A1931F2D400A55AFA /* RBHistoryTableViewController.m */; };
+		393B1F1D1931F2D400A55AFA /* RBHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1F1A1931F2D400A55AFA /* RBHistoryTableViewController.m */; };
+		393B1F1E1931F2D400A55AFA /* RBHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 393B1F1A1931F2D400A55AFA /* RBHistoryTableViewController.m */; };
+		393EB5C419236687007DDE35 /* RBFuelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 393EB5C319236687007DDE35 /* RBFuelModel.m */; };
+		393EB5C519236687007DDE35 /* RBFuelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 393EB5C319236687007DDE35 /* RBFuelModel.m */; };
+		393EB5C619236687007DDE35 /* RBFuelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 393EB5C319236687007DDE35 /* RBFuelModel.m */; };
+		393EB5C719236687007DDE35 /* RBFuelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 393EB5C319236687007DDE35 /* RBFuelModel.m */; };
+		393EB5CB19236778007DDE35 /* RBFuelModel+Comparing.m in Sources */ = {isa = PBXBuildFile; fileRef = 393EB5CA19236778007DDE35 /* RBFuelModel+Comparing.m */; };
+		393EB5CC19236778007DDE35 /* RBFuelModel+Comparing.m in Sources */ = {isa = PBXBuildFile; fileRef = 393EB5CA19236778007DDE35 /* RBFuelModel+Comparing.m */; };
+		393EB5CD19236778007DDE35 /* RBFuelModel+Comparing.m in Sources */ = {isa = PBXBuildFile; fileRef = 393EB5CA19236778007DDE35 /* RBFuelModel+Comparing.m */; };
+		393EB5CE19236778007DDE35 /* RBFuelModel+Comparing.m in Sources */ = {isa = PBXBuildFile; fileRef = 393EB5CA19236778007DDE35 /* RBFuelModel+Comparing.m */; };
+		395020BE1913D7C8000C43DA /* SampleReceipts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 395020BD1913D7C8000C43DA /* SampleReceipts.bundle */; };
+		395020CA1913D8EC000C43DA /* RBResearchMainClass.mm in Sources */ = {isa = PBXBuildFile; fileRef = 395020C21913D83A000C43DA /* RBResearchMainClass.mm */; };
+		395020CB1913D906000C43DA /* RBFilesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 395020C71913D875000C43DA /* RBFilesHelper.m */; };
+		395020D11913D966000C43DA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDF7180C5DE000443362 /* XCTest.framework */; };
+		395020D21913D966000C43DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDD8180C5DE000443362 /* Foundation.framework */; };
+		395020D31913D966000C43DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDDC180C5DE000443362 /* UIKit.framework */; };
+		395020D91913D966000C43DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 395020D71913D966000C43DA /* InfoPlist.strings */; };
+		395020E71913D971000C43DA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDF7180C5DE000443362 /* XCTest.framework */; };
+		395020E81913D972000C43DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDD8180C5DE000443362 /* Foundation.framework */; };
+		395020E91913D972000C43DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDDC180C5DE000443362 /* UIKit.framework */; };
+		395020EF1913D972000C43DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 395020ED1913D972000C43DA /* InfoPlist.strings */; };
+		395020F91913D98E000C43DA /* RBFilesHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 395020F81913D98E000C43DA /* RBFilesHelperTests.m */; };
+		395021151913F469000C43DA /* RBProcessImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 395021141913F469000C43DA /* RBProcessImageHelper.m */; };
+		395021161913F469000C43DA /* RBProcessImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 395021141913F469000C43DA /* RBProcessImageHelper.m */; };
+		3950211D1913F4D5000C43DA /* eng.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 395021181913F4D5000C43DA /* eng.traineddata */; };
+		3950211E1913F4D5000C43DA /* eng.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 395021181913F4D5000C43DA /* eng.traineddata */; };
+		3950211F1913F4D5000C43DA /* eng.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 395021181913F4D5000C43DA /* eng.traineddata */; };
+		395021201913F4D5000C43DA /* eng.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 395021181913F4D5000C43DA /* eng.traineddata */; };
+		395021211913F4D5000C43DA /* equ.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 395021191913F4D5000C43DA /* equ.traineddata */; };
+		395021221913F4D5000C43DA /* equ.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 395021191913F4D5000C43DA /* equ.traineddata */; };
+		395021231913F4D5000C43DA /* equ.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 395021191913F4D5000C43DA /* equ.traineddata */; };
+		395021241913F4D5000C43DA /* equ.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 395021191913F4D5000C43DA /* equ.traineddata */; };
+		395021251913F4D5000C43DA /* grc.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 3950211A1913F4D5000C43DA /* grc.traineddata */; };
+		395021261913F4D5000C43DA /* grc.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 3950211A1913F4D5000C43DA /* grc.traineddata */; };
+		395021271913F4D5000C43DA /* grc.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 3950211A1913F4D5000C43DA /* grc.traineddata */; };
+		395021281913F4D5000C43DA /* grc.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 3950211A1913F4D5000C43DA /* grc.traineddata */; };
+		395021291913F4D5000C43DA /* ita.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 3950211B1913F4D5000C43DA /* ita.traineddata */; };
+		3950212A1913F4D5000C43DA /* ita.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 3950211B1913F4D5000C43DA /* ita.traineddata */; };
+		3950212B1913F4D5000C43DA /* ita.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 3950211B1913F4D5000C43DA /* ita.traineddata */; };
+		3950212C1913F4D5000C43DA /* ita.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 3950211B1913F4D5000C43DA /* ita.traineddata */; };
+		3950212D1913F4D5000C43DA /* pol.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 3950211C1913F4D5000C43DA /* pol.traineddata */; };
+		3950212E1913F4D5000C43DA /* pol.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 3950211C1913F4D5000C43DA /* pol.traineddata */; };
+		3950212F1913F4D5000C43DA /* pol.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 3950211C1913F4D5000C43DA /* pol.traineddata */; };
+		395021301913F4D5000C43DA /* pol.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 3950211C1913F4D5000C43DA /* pol.traineddata */; };
+		395021331913F5D6000C43DA /* UIImage+Tesseract.m in Sources */ = {isa = PBXBuildFile; fileRef = 395021321913F5D6000C43DA /* UIImage+Tesseract.m */; };
+		395021341913F5D6000C43DA /* UIImage+Tesseract.m in Sources */ = {isa = PBXBuildFile; fileRef = 395021321913F5D6000C43DA /* UIImage+Tesseract.m */; };
+		395021351913F5D6000C43DA /* UIImage+Tesseract.m in Sources */ = {isa = PBXBuildFile; fileRef = 395021321913F5D6000C43DA /* UIImage+Tesseract.m */; };
+		395021361913F5D6000C43DA /* UIImage+Tesseract.m in Sources */ = {isa = PBXBuildFile; fileRef = 395021321913F5D6000C43DA /* UIImage+Tesseract.m */; };
+		3950213919141D8E000C43DA /* SampleReceipts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 395020BD1913D7C8000C43DA /* SampleReceipts.bundle */; };
+		3950213A191422C6000C43DA /* NSString+Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D151912BFCD00A211CC /* NSString+Score.m */; };
+		3950213B191422C7000C43DA /* NSString+Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 39174D151912BFCD00A211CC /* NSString+Score.m */; };
+		3962E8681916DFFE006544CD /* balu.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 3962E8671916DFFE006544CD /* balu.traineddata */; };
+		3962E8691916DFFE006544CD /* balu.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 3962E8671916DFFE006544CD /* balu.traineddata */; };
+		3962E86A1916DFFE006544CD /* balu.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 3962E8671916DFFE006544CD /* balu.traineddata */; };
+		3962E86B1916DFFE006544CD /* balu.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 3962E8671916DFFE006544CD /* balu.traineddata */; };
+		398CE9EF1928A48F00CCBA3F /* makephoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 398CE9EE1928A48F00CCBA3F /* makephoto.png */; };
+		398CE9F01928A48F00CCBA3F /* makephoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 398CE9EE1928A48F00CCBA3F /* makephoto.png */; };
+		39DE2FE91914BDA70000D3E8 /* NSArray+Mean.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DE2FE81914BDA70000D3E8 /* NSArray+Mean.m */; };
+		39DE2FEB1914BDF50000D3E8 /* RBNSarrayMeanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DE2FEA1914BDF50000D3E8 /* RBNSarrayMeanTests.m */; };
 		39E06C9E18F3E2EA00D86D2E /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397A1131187BF645003772C2 /* opencv2.framework */; };
+		39EA5880191D625400510664 /* NSArray+Combinatory.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA587F191D625400510664 /* NSArray+Combinatory.m */; };
+		39EA5881191D625400510664 /* NSArray+Combinatory.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA587F191D625400510664 /* NSArray+Combinatory.m */; };
+		39EA5882191D625400510664 /* NSArray+Combinatory.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA587F191D625400510664 /* NSArray+Combinatory.m */; };
+		39EA5883191D625400510664 /* NSArray+Combinatory.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA587F191D625400510664 /* NSArray+Combinatory.m */; };
+		39F828EE191532A000F2F13A /* RBResearchMainClass.mm in Sources */ = {isa = PBXBuildFile; fileRef = 395020C21913D83A000C43DA /* RBResearchMainClass.mm */; };
+		39F828EF191532BA00F2F13A /* RBFilesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 395020C71913D875000C43DA /* RBFilesHelper.m */; };
+		39F828F11915353300F2F13A /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F828F01915353300F2F13A /* AssetsLibrary.framework */; };
+		39F828F31915354A00F2F13A /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F828F21915354A00F2F13A /* Accelerate.framework */; };
+		39F828F51915355400F2F13A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F828F41915355400F2F13A /* AVFoundation.framework */; };
+		39F828F71915355C00F2F13A /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F828F61915355C00F2F13A /* CoreImage.framework */; };
+		39F828F91915356500F2F13A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F828F81915356500F2F13A /* CoreVideo.framework */; };
+		39F828FB1915357000F2F13A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F828FA1915357000F2F13A /* QuartzCore.framework */; };
+		39F828FC191563D300F2F13A /* NSArray+Mean.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DE2FE81914BDA70000D3E8 /* NSArray+Mean.m */; };
 		6400DDD9180C5DE000443362 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDD8180C5DE000443362 /* Foundation.framework */; };
 		6400DDDB180C5DE000443362 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDDA180C5DE000443362 /* CoreGraphics.framework */; };
 		6400DDDD180C5DE000443362 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDDC180C5DE000443362 /* UIKit.framework */; };
 		64E40AB1180C6D4D00C36DDE /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E40AB0180C6D4D00C36DDE /* libstdc++.6.0.9.dylib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		395020DD1913D966000C43DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6400DDCD180C5DE000443362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6400DDD4180C5DE000443362;
+			remoteInfo = "Fuel recognizer";
+		};
+		395020F31913D972000C43DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6400DDCD180C5DE000443362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 39174D531912E4C800A211CC;
+			remoteInfo = FuelLearning;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		390027F718636D9E00C08D27 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = ../Products/TesseractOCR.framework; sourceTree = "<group>"; };
 		3900280B1863707F00C08D27 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		3900280D1863708400C08D27 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		39172FF71926B7FA003D379B /* RBMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBMacros.h; sourceTree = "<group>"; };
 		39174CD61912B79500A211CC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "Fuel Recognizer Project/Application/AppDelegate.h"; sourceTree = SOURCE_ROOT; };
 		39174CD71912B79500A211CC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "Fuel Recognizer Project/Application/AppDelegate.m"; sourceTree = SOURCE_ROOT; };
 		39174CDB1912B7F800A211CC /* bigphoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigphoto.png; sourceTree = "<group>"; };
@@ -55,11 +206,6 @@
 		39174CE11912B80B00A211CC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Fuel Recognizer Project/Resources/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		39174CE41912B86400A211CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "Fuel Recognizer Project/en.lproj/InfoPlist.strings"; sourceTree = SOURCE_ROOT; };
 		39174CEC1912B9E700A211CC /* Fuel recognizer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Fuel recognizer-Prefix.pch"; path = "Fuel Recognizer Project/Fuel recognizer-Prefix.pch"; sourceTree = SOURCE_ROOT; };
-		39174CF41912BB8000A211CC /* eng.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; name = eng.traineddata; path = ../../../TesseractOCR/tessdata/eng.traineddata; sourceTree = "<group>"; };
-		39174CF51912BB8000A211CC /* equ.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; name = equ.traineddata; path = ../../../TesseractOCR/tessdata/equ.traineddata; sourceTree = "<group>"; };
-		39174CF61912BB8000A211CC /* grc.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; name = grc.traineddata; path = ../../../TesseractOCR/tessdata/grc.traineddata; sourceTree = "<group>"; };
-		39174CF71912BB8000A211CC /* ita.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; name = ita.traineddata; path = ../../../TesseractOCR/tessdata/ita.traineddata; sourceTree = "<group>"; };
-		39174CF81912BB8000A211CC /* pol.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; name = pol.traineddata; path = ../../../TesseractOCR/tessdata/pol.traineddata; sourceTree = "<group>"; };
 		39174CF91912BC1E00A211CC /* Fuel recognizer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Fuel recognizer-Info.plist"; path = "Fuel Recognizer Project/Fuel recognizer-Info.plist"; sourceTree = SOURCE_ROOT; };
 		39174D0D1912BFA600A211CC /* ReceiptModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiptModel.h; sourceTree = "<group>"; };
 		39174D0E1912BFA600A211CC /* ReceiptModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiptModel.m; sourceTree = "<group>"; };
@@ -69,10 +215,8 @@
 		39174D151912BFCD00A211CC /* NSString+Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Score.m"; sourceTree = "<group>"; };
 		39174D161912BFCD00A211CC /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixOrientation.h"; sourceTree = "<group>"; };
 		39174D171912BFCD00A211CC /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixOrientation.m"; sourceTree = "<group>"; };
-		39174D1B1912BFE000A211CC /* DataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTableViewController.h; sourceTree = "<group>"; };
-		39174D1C1912BFE000A211CC /* DataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTableViewController.m; sourceTree = "<group>"; };
 		39174D1D1912BFE000A211CC /* G8ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G8ViewController.h; sourceTree = "<group>"; };
-		39174D1E1912BFE000A211CC /* G8ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G8ViewController.m; sourceTree = "<group>"; };
+		39174D1E1912BFE000A211CC /* G8ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = G8ViewController.mm; sourceTree = "<group>"; };
 		39174D221912C03700A211CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39174D251912C04700A211CC /* ProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCell.h; sourceTree = "<group>"; };
 		39174D261912C04700A211CC /* ProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCell.m; sourceTree = "<group>"; };
@@ -103,20 +247,121 @@
 		39174D421912C07200A211CC /* UIImage+operation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+operation.h"; sourceTree = "<group>"; };
 		39174D431912C07200A211CC /* UIImage+operation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+operation.m"; sourceTree = "<group>"; };
 		39174D511912C0A500A211CC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Fuel Recognizer Project/main.m"; sourceTree = SOURCE_ROOT; };
+		39174D7C1912E4C800A211CC /* Fuel recognizer copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fuel recognizer copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		39174D7D1912E4C800A211CC /* Fuel recognizer learning-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Fuel recognizer learning-Info.plist"; path = "/Users/yoman/Documents/myProjects/FuelRecognizer/Fuel Recognizer Project/Fuel recognizer learning-Info.plist"; sourceTree = "<absolute>"; };
+		393B1EF31931EAE700A55AFA /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		393B1EF41931EAE700A55AFA /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		393B1EF51931EAE700A55AFA /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		393B1EF61931EAE700A55AFA /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		393B1EF71931EAE700A55AFA /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		393B1EF81931EAE700A55AFA /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		393B1EF91931EAE700A55AFA /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		393B1EFA1931EAE700A55AFA /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		393B1F0B1931EBFB00A55AFA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		393B1F0E1931EC1100A55AFA /* FuelModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FuelModel.xcdatamodel; sourceTree = "<group>"; };
+		393B1F131931EF7C00A55AFA /* RBFuelEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBFuelEntity.h; sourceTree = "<group>"; };
+		393B1F141931EF7C00A55AFA /* RBFuelEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBFuelEntity.m; sourceTree = "<group>"; };
+		393B1F191931F2D400A55AFA /* RBHistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBHistoryTableViewController.h; sourceTree = "<group>"; };
+		393B1F1A1931F2D400A55AFA /* RBHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBHistoryTableViewController.m; sourceTree = "<group>"; };
+		393EB5C219236687007DDE35 /* RBFuelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBFuelModel.h; sourceTree = "<group>"; };
+		393EB5C319236687007DDE35 /* RBFuelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBFuelModel.m; sourceTree = "<group>"; };
+		393EB5C919236778007DDE35 /* RBFuelModel+Comparing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RBFuelModel+Comparing.h"; sourceTree = "<group>"; };
+		393EB5CA19236778007DDE35 /* RBFuelModel+Comparing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RBFuelModel+Comparing.m"; sourceTree = "<group>"; };
+		395020BD1913D7C8000C43DA /* SampleReceipts.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SampleReceipts.bundle; sourceTree = "<group>"; };
+		395020C11913D83A000C43DA /* RBResearchMainClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBResearchMainClass.h; sourceTree = "<group>"; };
+		395020C21913D83A000C43DA /* RBResearchMainClass.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RBResearchMainClass.mm; sourceTree = "<group>"; };
+		395020C61913D875000C43DA /* RBFilesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBFilesHelper.h; sourceTree = "<group>"; };
+		395020C71913D875000C43DA /* RBFilesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBFilesHelper.m; sourceTree = "<group>"; };
+		395020D01913D966000C43DA /* Fuel recognizer Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fuel recognizer Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		395020D61913D966000C43DA /* Fuel recognizer Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Fuel recognizer Tests-Info.plist"; sourceTree = "<group>"; };
+		395020D81913D966000C43DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		395020DC1913D966000C43DA /* Fuel recognizer Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fuel recognizer Tests-Prefix.pch"; sourceTree = "<group>"; };
+		395020E61913D971000C43DA /* FuelLearning Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FuelLearning Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		395020EC1913D972000C43DA /* FuelLearning Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FuelLearning Tests-Info.plist"; sourceTree = "<group>"; };
+		395020EE1913D972000C43DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		395020F21913D972000C43DA /* FuelLearning Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FuelLearning Tests-Prefix.pch"; sourceTree = "<group>"; };
+		395020F81913D98E000C43DA /* RBFilesHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBFilesHelperTests.m; sourceTree = "<group>"; };
+		395021081913DFFA000C43DA /* ReceiptsTests.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ReceiptsTests.bundle; sourceTree = "<group>"; };
+		395021131913F469000C43DA /* RBProcessImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBProcessImageHelper.h; sourceTree = "<group>"; };
+		395021141913F469000C43DA /* RBProcessImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBProcessImageHelper.m; sourceTree = "<group>"; };
+		395021181913F4D5000C43DA /* eng.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = eng.traineddata; sourceTree = "<group>"; };
+		395021191913F4D5000C43DA /* equ.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = equ.traineddata; sourceTree = "<group>"; };
+		3950211A1913F4D5000C43DA /* grc.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = grc.traineddata; sourceTree = "<group>"; };
+		3950211B1913F4D5000C43DA /* ita.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = ita.traineddata; sourceTree = "<group>"; };
+		3950211C1913F4D5000C43DA /* pol.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = pol.traineddata; sourceTree = "<group>"; };
+		395021311913F5D6000C43DA /* UIImage+Tesseract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tesseract.h"; sourceTree = "<group>"; };
+		395021321913F5D6000C43DA /* UIImage+Tesseract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tesseract.m"; sourceTree = "<group>"; };
+		3962E8671916DFFE006544CD /* balu.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = balu.traineddata; sourceTree = "<group>"; };
 		397A1131187BF645003772C2 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../Products/opencv2.framework; sourceTree = "<group>"; };
+		398CE9EE1928A48F00CCBA3F /* makephoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = makephoto.png; path = ../../../../../../../Downloads/makephoto.png; sourceTree = "<group>"; };
+		39DE2FE71914BDA70000D3E8 /* NSArray+Mean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Mean.h"; sourceTree = "<group>"; };
+		39DE2FE81914BDA70000D3E8 /* NSArray+Mean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Mean.m"; sourceTree = "<group>"; };
+		39DE2FEA1914BDF50000D3E8 /* RBNSarrayMeanTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBNSarrayMeanTests.m; sourceTree = "<group>"; };
+		39EA587E191D625400510664 /* NSArray+Combinatory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Combinatory.h"; sourceTree = "<group>"; };
+		39EA587F191D625400510664 /* NSArray+Combinatory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Combinatory.m"; sourceTree = "<group>"; };
+		39F828F01915353300F2F13A /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		39F828F21915354A00F2F13A /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		39F828F41915355400F2F13A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		39F828F61915355C00F2F13A /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		39F828F81915356500F2F13A /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		39F828FA1915357000F2F13A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6400DDD5180C5DE000443362 /* Fuel recognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fuel recognizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6400DDD8180C5DE000443362 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6400DDDA180C5DE000443362 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6400DDDC180C5DE000443362 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6400DDF7180C5DE000443362 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		64E40AB0180C6D4D00C36DDE /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		80C56E0F247B4E5980A432D1 /* Pods-FuelLearning.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuelLearning.xcconfig"; path = "Pods/Pods-FuelLearning.xcconfig"; sourceTree = "<group>"; };
+		C7F9D091E978471BB792107E /* libPods-FuelLearning.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FuelLearning.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		39174D681912E4C800A211CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39174D691912E4C800A211CC /* opencv2.framework in Frameworks */,
+				39174D6A1912E4C800A211CC /* CoreMedia.framework in Frameworks */,
+				39174D6B1912E4C800A211CC /* ImageIO.framework in Frameworks */,
+				39174D6C1912E4C800A211CC /* TesseractOCR.framework in Frameworks */,
+				39174D6D1912E4C800A211CC /* libstdc++.6.0.9.dylib in Frameworks */,
+				39174D6E1912E4C800A211CC /* CoreGraphics.framework in Frameworks */,
+				39174D6F1912E4C800A211CC /* UIKit.framework in Frameworks */,
+				39174D701912E4C800A211CC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		395020CD1913D966000C43DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				395020D11913D966000C43DA /* XCTest.framework in Frameworks */,
+				395020D31913D966000C43DA /* UIKit.framework in Frameworks */,
+				395020D21913D966000C43DA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		395020E31913D971000C43DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				395020E71913D971000C43DA /* XCTest.framework in Frameworks */,
+				395020E91913D972000C43DA /* UIKit.framework in Frameworks */,
+				395020E81913D972000C43DA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6400DDD2180C5DE000443362 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				393B1F0C1931EBFB00A55AFA /* CoreData.framework in Frameworks */,
+				39F828FB1915357000F2F13A /* QuartzCore.framework in Frameworks */,
+				39F828F91915356500F2F13A /* CoreVideo.framework in Frameworks */,
+				39F828F71915355C00F2F13A /* CoreImage.framework in Frameworks */,
+				39F828F51915355400F2F13A /* AVFoundation.framework in Frameworks */,
+				39F828F31915354A00F2F13A /* Accelerate.framework in Frameworks */,
+				39F828F11915353300F2F13A /* AssetsLibrary.framework in Frameworks */,
 				39E06C9E18F3E2EA00D86D2E /* opencv2.framework in Frameworks */,
 				3900280E1863708400C08D27 /* CoreMedia.framework in Frameworks */,
 				3900280C1863707F00C08D27 /* ImageIO.framework in Frameworks */,
@@ -136,6 +381,7 @@
 			children = (
 				39174CD61912B79500A211CC /* AppDelegate.h */,
 				39174CD71912B79500A211CC /* AppDelegate.m */,
+				39172FF71926B7FA003D379B /* RBMacros.h */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -153,6 +399,7 @@
 		39174CDA1912B7DC00A211CC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				398CE9EE1928A48F00CCBA3F /* makephoto.png */,
 				39174CDB1912B7F800A211CC /* bigphoto.png */,
 				39174CDC1912B7F800A211CC /* makefg.php-2.png */,
 				39174CDD1912B7F800A211CC /* makefg.php.png */,
@@ -167,6 +414,11 @@
 				39174D0E1912BFA600A211CC /* ReceiptModel.m */,
 				39174D0F1912BFA600A211CC /* ReceiptObject.h */,
 				39174D101912BFA600A211CC /* ReceiptObject.m */,
+				393EB5C219236687007DDE35 /* RBFuelModel.h */,
+				393EB5C319236687007DDE35 /* RBFuelModel.m */,
+				393B1F0D1931EC1100A55AFA /* FuelModel.xcdatamodeld */,
+				393B1F131931EF7C00A55AFA /* RBFuelEntity.h */,
+				393B1F141931EF7C00A55AFA /* RBFuelEntity.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -178,6 +430,14 @@
 				39174D151912BFCD00A211CC /* NSString+Score.m */,
 				39174D161912BFCD00A211CC /* UIImage+FixOrientation.h */,
 				39174D171912BFCD00A211CC /* UIImage+FixOrientation.m */,
+				395021311913F5D6000C43DA /* UIImage+Tesseract.h */,
+				395021321913F5D6000C43DA /* UIImage+Tesseract.m */,
+				39DE2FE71914BDA70000D3E8 /* NSArray+Mean.h */,
+				39DE2FE81914BDA70000D3E8 /* NSArray+Mean.m */,
+				39EA587E191D625400510664 /* NSArray+Combinatory.h */,
+				39EA587F191D625400510664 /* NSArray+Combinatory.m */,
+				393EB5C919236778007DDE35 /* RBFuelModel+Comparing.h */,
+				393EB5CA19236778007DDE35 /* RBFuelModel+Comparing.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -185,10 +445,10 @@
 		39174D1A1912BFE000A211CC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				39174D1B1912BFE000A211CC /* DataTableViewController.h */,
-				39174D1C1912BFE000A211CC /* DataTableViewController.m */,
 				39174D1D1912BFE000A211CC /* G8ViewController.h */,
-				39174D1E1912BFE000A211CC /* G8ViewController.m */,
+				39174D1E1912BFE000A211CC /* G8ViewController.mm */,
+				393B1F191931F2D400A55AFA /* RBHistoryTableViewController.h */,
+				393B1F1A1931F2D400A55AFA /* RBHistoryTableViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -243,12 +503,115 @@
 			path = Curve;
 			sourceTree = "<group>";
 		};
+		393B1EF21931EAE700A55AFA /* TPKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				393B1EF31931EAE700A55AFA /* TPKeyboardAvoidingCollectionView.h */,
+				393B1EF41931EAE700A55AFA /* TPKeyboardAvoidingCollectionView.m */,
+				393B1EF51931EAE700A55AFA /* TPKeyboardAvoidingScrollView.h */,
+				393B1EF61931EAE700A55AFA /* TPKeyboardAvoidingScrollView.m */,
+				393B1EF71931EAE700A55AFA /* TPKeyboardAvoidingTableView.h */,
+				393B1EF81931EAE700A55AFA /* TPKeyboardAvoidingTableView.m */,
+				393B1EF91931EAE700A55AFA /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				393B1EFA1931EAE700A55AFA /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+			);
+			name = TPKeyboardAvoiding;
+			path = "../../../../Downloads/TPKeyboardAvoiding-master/TPKeyboardAvoiding";
+			sourceTree = "<group>";
+		};
+		395020BC1913D7C8000C43DA /* Bundles */ = {
+			isa = PBXGroup;
+			children = (
+				395020BD1913D7C8000C43DA /* SampleReceipts.bundle */,
+			);
+			path = Bundles;
+			sourceTree = "<group>";
+		};
+		395020C01913D818000C43DA /* TestingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				395020C51913D866000C43DA /* Helpers */,
+				395020C11913D83A000C43DA /* RBResearchMainClass.h */,
+				395020C21913D83A000C43DA /* RBResearchMainClass.mm */,
+			);
+			name = TestingFiles;
+			path = "Fuel Recognizer Project/TestingFiles";
+			sourceTree = SOURCE_ROOT;
+		};
+		395020C51913D866000C43DA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				395020C61913D875000C43DA /* RBFilesHelper.h */,
+				395020C71913D875000C43DA /* RBFilesHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		395020D41913D966000C43DA /* Fuel recognizer Tests */ = {
+			isa = PBXGroup;
+			children = (
+				395020D51913D966000C43DA /* Supporting Files */,
+			);
+			path = "Fuel recognizer Tests";
+			sourceTree = "<group>";
+		};
+		395020D51913D966000C43DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				395020D61913D966000C43DA /* Fuel recognizer Tests-Info.plist */,
+				395020D71913D966000C43DA /* InfoPlist.strings */,
+				395020DC1913D966000C43DA /* Fuel recognizer Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		395020EA1913D972000C43DA /* FuelLearning Tests */ = {
+			isa = PBXGroup;
+			children = (
+				395021071913DFFA000C43DA /* Bundles */,
+				395020EB1913D972000C43DA /* Supporting Files */,
+				395020F81913D98E000C43DA /* RBFilesHelperTests.m */,
+				39DE2FEA1914BDF50000D3E8 /* RBNSarrayMeanTests.m */,
+			);
+			path = "FuelLearning Tests";
+			sourceTree = "<group>";
+		};
+		395020EB1913D972000C43DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				395020EC1913D972000C43DA /* FuelLearning Tests-Info.plist */,
+				395020ED1913D972000C43DA /* InfoPlist.strings */,
+				395020F21913D972000C43DA /* FuelLearning Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		395021071913DFFA000C43DA /* Bundles */ = {
+			isa = PBXGroup;
+			children = (
+				395021081913DFFA000C43DA /* ReceiptsTests.bundle */,
+			);
+			path = Bundles;
+			sourceTree = "<group>";
+		};
+		395021121913F44F000C43DA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				395021131913F469000C43DA /* RBProcessImageHelper.h */,
+				395021141913F469000C43DA /* RBProcessImageHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		6400DDCC180C5DE000443362 = {
 			isa = PBXGroup;
 			children = (
 				6400DDDE180C5DE000443362 /* FuelRecognizer */,
+				395020D41913D966000C43DA /* Fuel recognizer Tests */,
+				395020EA1913D972000C43DA /* FuelLearning Tests */,
 				6400DDD7180C5DE000443362 /* Frameworks */,
 				6400DDD6180C5DE000443362 /* Products */,
+				80C56E0F247B4E5980A432D1 /* Pods-FuelLearning.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -256,6 +619,9 @@
 			isa = PBXGroup;
 			children = (
 				6400DDD5180C5DE000443362 /* Fuel recognizer.app */,
+				39174D7C1912E4C800A211CC /* Fuel recognizer copy.app */,
+				395020D01913D966000C43DA /* Fuel recognizer Tests.xctest */,
+				395020E61913D971000C43DA /* FuelLearning Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -263,6 +629,14 @@
 		6400DDD7180C5DE000443362 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				393B1F0B1931EBFB00A55AFA /* CoreData.framework */,
+				393B1EF21931EAE700A55AFA /* TPKeyboardAvoiding */,
+				39F828FA1915357000F2F13A /* QuartzCore.framework */,
+				39F828F81915356500F2F13A /* CoreVideo.framework */,
+				39F828F61915355C00F2F13A /* CoreImage.framework */,
+				39F828F41915355400F2F13A /* AVFoundation.framework */,
+				39F828F21915354A00F2F13A /* Accelerate.framework */,
+				39F828F01915353300F2F13A /* AssetsLibrary.framework */,
 				3900280D1863708400C08D27 /* CoreMedia.framework */,
 				3900280B1863707F00C08D27 /* ImageIO.framework */,
 				64E40AB0180C6D4D00C36DDE /* libstdc++.6.0.9.dylib */,
@@ -272,6 +646,7 @@
 				6400DDDA180C5DE000443362 /* CoreGraphics.framework */,
 				6400DDDC180C5DE000443362 /* UIKit.framework */,
 				6400DDF7180C5DE000443362 /* XCTest.framework */,
+				C7F9D091E978471BB792107E /* libPods-FuelLearning.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -279,15 +654,18 @@
 		6400DDDE180C5DE000443362 /* FuelRecognizer */ = {
 			isa = PBXGroup;
 			children = (
-				39174D281912C07200A211CC /* ImageProcessing */,
-				39174D241912C04700A211CC /* Views */,
-				39174D211912C03700A211CC /* Main.storyboard */,
-				39174D1A1912BFE000A211CC /* Controllers */,
-				39174D131912BFCD00A211CC /* Categories */,
-				39174D0C1912BFA600A211CC /* Models */,
 				39174CC91912B68B00A211CC /* Application */,
+				395020BC1913D7C8000C43DA /* Bundles */,
+				39174D131912BFCD00A211CC /* Categories */,
+				39174D1A1912BFE000A211CC /* Controllers */,
+				395021121913F44F000C43DA /* Helpers */,
+				39174D281912C07200A211CC /* ImageProcessing */,
+				39174D211912C03700A211CC /* Main.storyboard */,
+				39174D0C1912BFA600A211CC /* Models */,
 				6400DDDF180C5DE000443362 /* Supporting Files */,
 				6400DE18180C5FBE00443362 /* tessdata */,
+				395020C01913D818000C43DA /* TestingFiles */,
+				39174D241912C04700A211CC /* Views */,
 			);
 			name = FuelRecognizer;
 			path = "Fuel Recognizer Project";
@@ -298,6 +676,7 @@
 			children = (
 				39174D511912C0A500A211CC /* main.m */,
 				39174CF91912BC1E00A211CC /* Fuel recognizer-Info.plist */,
+				39174D7D1912E4C800A211CC /* Fuel recognizer learning-Info.plist */,
 				39174CEC1912B9E700A211CC /* Fuel recognizer-Prefix.pch */,
 				39174CE31912B86400A211CC /* InfoPlist.strings */,
 				39174CD91912B7DC00A211CC /* Resources */,
@@ -309,19 +688,73 @@
 		6400DE18180C5FBE00443362 /* tessdata */ = {
 			isa = PBXGroup;
 			children = (
-				39174CF41912BB8000A211CC /* eng.traineddata */,
-				39174CF51912BB8000A211CC /* equ.traineddata */,
-				39174CF61912BB8000A211CC /* grc.traineddata */,
-				39174CF71912BB8000A211CC /* ita.traineddata */,
-				39174CF81912BB8000A211CC /* pol.traineddata */,
+				3962E8671916DFFE006544CD /* balu.traineddata */,
+				395021181913F4D5000C43DA /* eng.traineddata */,
+				395021191913F4D5000C43DA /* equ.traineddata */,
+				3950211A1913F4D5000C43DA /* grc.traineddata */,
+				3950211B1913F4D5000C43DA /* ita.traineddata */,
+				3950211C1913F4D5000C43DA /* pol.traineddata */,
 			);
 			name = tessdata;
-			path = ../TesseractOCR/tessdata;
+			path = ../../TesseractOCR/tessdata;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		39174D531912E4C800A211CC /* FuelLearning */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39174D791912E4C800A211CC /* Build configuration list for PBXNativeTarget "FuelLearning" */;
+			buildPhases = (
+				39174D541912E4C800A211CC /* Sources */,
+				39174D681912E4C800A211CC /* Frameworks */,
+				39174D711912E4C800A211CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FuelLearning;
+			productName = "Fuel Recognizer Project";
+			productReference = 39174D7C1912E4C800A211CC /* Fuel recognizer copy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		395020CF1913D966000C43DA /* Fuel recognizer Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 395020DF1913D966000C43DA /* Build configuration list for PBXNativeTarget "Fuel recognizer Tests" */;
+			buildPhases = (
+				395020CC1913D966000C43DA /* Sources */,
+				395020CD1913D966000C43DA /* Frameworks */,
+				395020CE1913D966000C43DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				395020DE1913D966000C43DA /* PBXTargetDependency */,
+			);
+			name = "Fuel recognizer Tests";
+			productName = "Fuel recognizer Tests";
+			productReference = 395020D01913D966000C43DA /* Fuel recognizer Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		395020E51913D971000C43DA /* FuelLearning Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 395020F51913D972000C43DA /* Build configuration list for PBXNativeTarget "FuelLearning Tests" */;
+			buildPhases = (
+				395020E21913D971000C43DA /* Sources */,
+				395020E31913D971000C43DA /* Frameworks */,
+				395020E41913D971000C43DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				395020F41913D972000C43DA /* PBXTargetDependency */,
+			);
+			name = "FuelLearning Tests";
+			productName = "FuelLearning Tests";
+			productReference = 395020E61913D971000C43DA /* FuelLearning Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		6400DDD4180C5DE000443362 /* Fuel recognizer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6400DE07180C5DE100443362 /* Build configuration list for PBXNativeTarget "Fuel recognizer" */;
@@ -348,6 +781,14 @@
 				CLASSPREFIX = RB;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Roman Barzyczak";
+				TargetAttributes = {
+					395020CF1913D966000C43DA = {
+						TestTargetID = 6400DDD4180C5DE000443362;
+					};
+					395020E51913D971000C43DA = {
+						TestTargetID = 39174D531912E4C800A211CC;
+					};
+				};
 			};
 			buildConfigurationList = 6400DDD0180C5DE000443362 /* Build configuration list for PBXProject "Fuel recognizer" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -363,21 +804,82 @@
 			projectRoot = "";
 			targets = (
 				6400DDD4180C5DE000443362 /* Fuel recognizer */,
+				39174D531912E4C800A211CC /* FuelLearning */,
+				395020CF1913D966000C43DA /* Fuel recognizer Tests */,
+				395020E51913D971000C43DA /* FuelLearning Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		39174D711912E4C800A211CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3950211E1913F4D5000C43DA /* eng.traineddata in Resources */,
+				39174D721912E4C800A211CC /* Main.storyboard in Resources */,
+				3950212A1913F4D5000C43DA /* ita.traineddata in Resources */,
+				3962E8691916DFFE006544CD /* balu.traineddata in Resources */,
+				39174D731912E4C800A211CC /* InfoPlist.strings in Resources */,
+				3950213919141D8E000C43DA /* SampleReceipts.bundle in Resources */,
+				39174D741912E4C800A211CC /* makefg.php-2.png in Resources */,
+				3950212E1913F4D5000C43DA /* pol.traineddata in Resources */,
+				39174D751912E4C800A211CC /* Images.xcassets in Resources */,
+				39174D761912E4C800A211CC /* Fuel recognizer-Info.plist in Resources */,
+				395021261913F4D5000C43DA /* grc.traineddata in Resources */,
+				395021221913F4D5000C43DA /* equ.traineddata in Resources */,
+				39174D771912E4C800A211CC /* makefg.php.png in Resources */,
+				398CE9F01928A48F00CCBA3F /* makephoto.png in Resources */,
+				39174D781912E4C800A211CC /* bigphoto.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		395020CE1913D966000C43DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				395021231913F4D5000C43DA /* equ.traineddata in Resources */,
+				3950212B1913F4D5000C43DA /* ita.traineddata in Resources */,
+				3950211F1913F4D5000C43DA /* eng.traineddata in Resources */,
+				3962E86A1916DFFE006544CD /* balu.traineddata in Resources */,
+				395021271913F4D5000C43DA /* grc.traineddata in Resources */,
+				395020D91913D966000C43DA /* InfoPlist.strings in Resources */,
+				3950212F1913F4D5000C43DA /* pol.traineddata in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		395020E41913D971000C43DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				395021201913F4D5000C43DA /* eng.traineddata in Resources */,
+				395021281913F4D5000C43DA /* grc.traineddata in Resources */,
+				395021241913F4D5000C43DA /* equ.traineddata in Resources */,
+				3962E86B1916DFFE006544CD /* balu.traineddata in Resources */,
+				395021301913F4D5000C43DA /* pol.traineddata in Resources */,
+				3950212C1913F4D5000C43DA /* ita.traineddata in Resources */,
+				395020EF1913D972000C43DA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6400DDD3180C5DE000443362 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3950211D1913F4D5000C43DA /* eng.traineddata in Resources */,
 				39174D501912C08C00A211CC /* Main.storyboard in Resources */,
+				395021291913F4D5000C43DA /* ita.traineddata in Resources */,
+				3950212D1913F4D5000C43DA /* pol.traineddata in Resources */,
 				39174CE51912B86400A211CC /* InfoPlist.strings in Resources */,
 				39174CDF1912B7F800A211CC /* makefg.php-2.png in Resources */,
 				39174CE21912B80B00A211CC /* Images.xcassets in Resources */,
 				39174CFA1912BC1E00A211CC /* Fuel recognizer-Info.plist in Resources */,
+				3962E8681916DFFE006544CD /* balu.traineddata in Resources */,
+				395021211913F4D5000C43DA /* equ.traineddata in Resources */,
 				39174CE01912B7F800A211CC /* makefg.php.png in Resources */,
+				395020BE1913D7C8000C43DA /* SampleReceipts.bundle in Resources */,
+				395021251913F4D5000C43DA /* grc.traineddata in Resources */,
+				398CE9EF1928A48F00CCBA3F /* makephoto.png in Resources */,
 				39174CDE1912B7F800A211CC /* bigphoto.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +887,87 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		39174D541912E4C800A211CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				395020CA1913D8EC000C43DA /* RBResearchMainClass.mm in Sources */,
+				39174D551912E4C800A211CC /* ImageProcessingImplementation.mm in Sources */,
+				39174D561912E4C800A211CC /* BezierCurve.m in Sources */,
+				393B1F1C1931F2D400A55AFA /* RBHistoryTableViewController.m in Sources */,
+				39174D571912E4C800A211CC /* CubicBezierCurve.m in Sources */,
+				39EA5881191D625400510664 /* NSArray+Combinatory.m in Sources */,
+				39174D581912E4C800A211CC /* G8ViewController.mm in Sources */,
+				39174D591912E4C800A211CC /* UIImage+OpenCV.mm in Sources */,
+				393B1EFC1931EAE700A55AFA /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				393EB5C519236687007DDE35 /* RBFuelModel.m in Sources */,
+				395021341913F5D6000C43DA /* UIImage+Tesseract.m in Sources */,
+				39174D5A1912E4C800A211CC /* ReceiptObject.m in Sources */,
+				393EB5CC19236778007DDE35 /* RBFuelModel+Comparing.m in Sources */,
+				39174D5B1912E4C800A211CC /* ProductCell.m in Sources */,
+				395020CB1913D906000C43DA /* RBFilesHelper.m in Sources */,
+				39DE2FE91914BDA70000D3E8 /* NSArray+Mean.m in Sources */,
+				393B1F161931EF7C00A55AFA /* RBFuelEntity.m in Sources */,
+				39174D5D1912E4C800A211CC /* main.m in Sources */,
+				393B1F101931EC1100A55AFA /* FuelModel.xcdatamodeld in Sources */,
+				39174D5E1912E4C800A211CC /* AppDelegate.m in Sources */,
+				393B1F041931EAE700A55AFA /* TPKeyboardAvoidingTableView.m in Sources */,
+				39174D5F1912E4C800A211CC /* NSArray_PointArray.m in Sources */,
+				395021161913F469000C43DA /* RBProcessImageHelper.m in Sources */,
+				39174D601912E4C800A211CC /* LinearBezierCurve.m in Sources */,
+				393B1F001931EAE700A55AFA /* TPKeyboardAvoidingScrollView.m in Sources */,
+				39174D611912E4C800A211CC /* QuadraticBezierCurve.m in Sources */,
+				39174D621912E4C800A211CC /* CatmullRomSpline.m in Sources */,
+				3950213A191422C6000C43DA /* NSString+Score.m in Sources */,
+				39174D631912E4C800A211CC /* ImageProcessor.cpp in Sources */,
+				39174D641912E4C800A211CC /* ReceiptModel.m in Sources */,
+				39174D651912E4C800A211CC /* UIImage+operation.m in Sources */,
+				393B1F081931EAE700A55AFA /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				39174D661912E4C800A211CC /* Spline.m in Sources */,
+				39174D671912E4C800A211CC /* ImageFilter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		395020CC1913D966000C43DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				393B1F171931EF7C00A55AFA /* RBFuelEntity.m in Sources */,
+				393B1F011931EAE700A55AFA /* TPKeyboardAvoidingScrollView.m in Sources */,
+				393B1F111931EC1100A55AFA /* FuelModel.xcdatamodeld in Sources */,
+				393B1F051931EAE700A55AFA /* TPKeyboardAvoidingTableView.m in Sources */,
+				39EA5882191D625400510664 /* NSArray+Combinatory.m in Sources */,
+				395021351913F5D6000C43DA /* UIImage+Tesseract.m in Sources */,
+				393B1F1D1931F2D400A55AFA /* RBHistoryTableViewController.m in Sources */,
+				393B1F091931EAE700A55AFA /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				3929BF9E191D716000924B1C /* RBResearchMainClass.mm in Sources */,
+				393EB5CD19236778007DDE35 /* RBFuelModel+Comparing.m in Sources */,
+				393B1EFD1931EAE700A55AFA /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				393EB5C619236687007DDE35 /* RBFuelModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		395020E21913D971000C43DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				393B1F181931EF7C00A55AFA /* RBFuelEntity.m in Sources */,
+				3929BF9D191D716000924B1C /* RBResearchMainClass.mm in Sources */,
+				393B1F061931EAE700A55AFA /* TPKeyboardAvoidingTableView.m in Sources */,
+				393EB5C719236687007DDE35 /* RBFuelModel.m in Sources */,
+				393B1EFE1931EAE700A55AFA /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				395021361913F5D6000C43DA /* UIImage+Tesseract.m in Sources */,
+				393B1F0A1931EAE700A55AFA /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				393EB5CE19236778007DDE35 /* RBFuelModel+Comparing.m in Sources */,
+				395020F91913D98E000C43DA /* RBFilesHelperTests.m in Sources */,
+				393B1F021931EAE700A55AFA /* TPKeyboardAvoidingScrollView.m in Sources */,
+				393B1F1E1931F2D400A55AFA /* RBHistoryTableViewController.m in Sources */,
+				39EA5883191D625400510664 /* NSArray+Combinatory.m in Sources */,
+				39DE2FEB1914BDF50000D3E8 /* RBNSarrayMeanTests.m in Sources */,
+				393B1F121931EC1100A55AFA /* FuelModel.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6400DDD1180C5DE000443362 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -392,26 +975,54 @@
 				39174D4C1912C07200A211CC /* ImageProcessingImplementation.mm in Sources */,
 				39174D441912C07200A211CC /* BezierCurve.m in Sources */,
 				39174D461912C07200A211CC /* CubicBezierCurve.m in Sources */,
-				39174D201912BFE000A211CC /* G8ViewController.m in Sources */,
+				393B1F1B1931F2D400A55AFA /* RBHistoryTableViewController.m in Sources */,
+				39174D201912BFE000A211CC /* G8ViewController.mm in Sources */,
+				39EA5880191D625400510664 /* NSArray+Combinatory.m in Sources */,
 				39174D4E1912C07200A211CC /* UIImage+OpenCV.mm in Sources */,
 				39174D121912BFA600A211CC /* ReceiptObject.m in Sources */,
+				393B1EFB1931EAE700A55AFA /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				393EB5C419236687007DDE35 /* RBFuelModel.m in Sources */,
 				39174D271912C04700A211CC /* ProductCell.m in Sources */,
-				39174D1F1912BFE000A211CC /* DataTableViewController.m in Sources */,
+				395021151913F469000C43DA /* RBProcessImageHelper.m in Sources */,
+				393EB5CB19236778007DDE35 /* RBFuelModel+Comparing.m in Sources */,
+				39F828EF191532BA00F2F13A /* RBFilesHelper.m in Sources */,
 				39174D521912C0A500A211CC /* main.m in Sources */,
+				39F828FC191563D300F2F13A /* NSArray+Mean.m in Sources */,
+				393B1F151931EF7C00A55AFA /* RBFuelEntity.m in Sources */,
 				39174D001912BD8A00A211CC /* AppDelegate.m in Sources */,
+				393B1F0F1931EC1100A55AFA /* FuelModel.xcdatamodeld in Sources */,
 				39174D481912C07200A211CC /* NSArray_PointArray.m in Sources */,
+				393B1F031931EAE700A55AFA /* TPKeyboardAvoidingTableView.m in Sources */,
 				39174D471912C07200A211CC /* LinearBezierCurve.m in Sources */,
+				395021331913F5D6000C43DA /* UIImage+Tesseract.m in Sources */,
+				3950213B191422C7000C43DA /* NSString+Score.m in Sources */,
+				393B1EFF1931EAE700A55AFA /* TPKeyboardAvoidingScrollView.m in Sources */,
+				39F828EE191532A000F2F13A /* RBResearchMainClass.mm in Sources */,
 				39174D491912C07200A211CC /* QuadraticBezierCurve.m in Sources */,
 				39174D451912C07200A211CC /* CatmullRomSpline.m in Sources */,
 				39174D4D1912C07200A211CC /* ImageProcessor.cpp in Sources */,
 				39174D111912BFA600A211CC /* ReceiptModel.m in Sources */,
 				39174D4F1912C07200A211CC /* UIImage+operation.m in Sources */,
+				393B1F071931EAE700A55AFA /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				39174D4A1912C07200A211CC /* Spline.m in Sources */,
 				39174D4B1912C07200A211CC /* ImageFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		395020DE1913D966000C43DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6400DDD4180C5DE000443362 /* Fuel recognizer */;
+			targetProxy = 395020DD1913D966000C43DA /* PBXContainerItemProxy */;
+		};
+		395020F41913D972000C43DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 39174D531912E4C800A211CC /* FuelLearning */;
+			targetProxy = 395020F31913D972000C43DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		39174CE31912B86400A211CC /* InfoPlist.strings */ = {
@@ -430,9 +1041,157 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
+		395020D71913D966000C43DA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				395020D81913D966000C43DA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		395020ED1913D972000C43DA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				395020EE1913D972000C43DA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		39174D7A1912E4C800A211CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/yoman/Documents/iOS/libraries/Tesseract-OCR-iOS/Products",
+					"/Users/yoman/Documents/myProjects/mgr/mgr/Tesseract-OCR-iOS/Products",
+					/Users/yoman/Documents/myProjects/mgr/mgr/FuelRecognizer/Products,
+					/Users/yoman/Documents/myProjects/FuelRecognizer/Products,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fuel Recognizer Project/Fuel recognizer-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Fuel recognizer learning-Info.plist";
+				PRODUCT_NAME = "Fuel recognizer copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		39174D7B1912E4C800A211CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/yoman/Documents/iOS/libraries/Tesseract-OCR-iOS/Products",
+					"/Users/yoman/Documents/myProjects/mgr/mgr/Tesseract-OCR-iOS/Products",
+					/Users/yoman/Documents/myProjects/mgr/mgr/FuelRecognizer/Products,
+					/Users/yoman/Documents/myProjects/FuelRecognizer/Products,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fuel Recognizer Project/Fuel recognizer-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Fuel recognizer learning-Info.plist";
+				PRODUCT_NAME = "Fuel recognizer copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		395020E01913D966000C43DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Fuel recognizer.app/Fuel recognizer";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					/Users/yoman/Documents/myProjects/FuelRecognizer/Products,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fuel recognizer Tests/Fuel recognizer Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Fuel recognizer Tests/Fuel recognizer Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		395020E11913D966000C43DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Fuel recognizer.app/Fuel recognizer";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					/Users/yoman/Documents/myProjects/FuelRecognizer/Products,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fuel recognizer Tests/Fuel recognizer Tests-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Fuel recognizer Tests/Fuel recognizer Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		395020F61913D972000C43DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Fuel recognizer copy.app/Fuel recognizer copy";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					/Users/yoman/Documents/myProjects/FuelRecognizer/Products,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FuelLearning Tests/FuelLearning Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "FuelLearning Tests/FuelLearning Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		395020F71913D972000C43DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Fuel recognizer copy.app/Fuel recognizer copy";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					/Users/yoman/Documents/myProjects/FuelRecognizer/Products,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FuelLearning Tests/FuelLearning Tests-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "FuelLearning Tests/FuelLearning Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		6400DE05180C5DE100443362 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -465,10 +1224,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = "-lstdc++";
+				PROVISIONING_PROFILE = "AD88D528-D9F3-4803-981F-AEDF4E2DCB15";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "armv7 armv7s";
 			};
@@ -500,9 +1260,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = "-lstdc++";
+				PROVISIONING_PROFILE = "AD88D528-D9F3-4803-981F-AEDF4E2DCB15";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 armv7s";
@@ -525,6 +1286,7 @@
 				GCC_PREFIX_HEADER = "Fuel Recognizer Project/Fuel recognizer-Prefix.pch";
 				INFOPLIST_FILE = "Fuel Recognizer Project/Fuel recognizer-Info.plist";
 				PRODUCT_NAME = "Fuel recognizer";
+				PROVISIONING_PROFILE = "DF73C2D0-E3A4-4DFD-9F33-42F028B2D9EB";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -545,6 +1307,7 @@
 				GCC_PREFIX_HEADER = "Fuel Recognizer Project/Fuel recognizer-Prefix.pch";
 				INFOPLIST_FILE = "Fuel Recognizer Project/Fuel recognizer-Info.plist";
 				PRODUCT_NAME = "Fuel recognizer";
+				PROVISIONING_PROFILE = "DF73C2D0-E3A4-4DFD-9F33-42F028B2D9EB";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -552,6 +1315,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		39174D791912E4C800A211CC /* Build configuration list for PBXNativeTarget "FuelLearning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39174D7A1912E4C800A211CC /* Debug */,
+				39174D7B1912E4C800A211CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		395020DF1913D966000C43DA /* Build configuration list for PBXNativeTarget "Fuel recognizer Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				395020E01913D966000C43DA /* Debug */,
+				395020E11913D966000C43DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		395020F51913D972000C43DA /* Build configuration list for PBXNativeTarget "FuelLearning Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				395020F61913D972000C43DA /* Debug */,
+				395020F71913D972000C43DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6400DDD0180C5DE000443362 /* Build configuration list for PBXProject "Fuel recognizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -571,6 +1361,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		393B1F0D1931EC1100A55AFA /* FuelModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				393B1F0E1931EC1100A55AFA /* FuelModel.xcdatamodel */,
+			);
+			currentVersion = 393B1F0E1931EC1100A55AFA /* FuelModel.xcdatamodel */;
+			path = FuelModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6400DDCD180C5DE000443362 /* Project object */;
 }

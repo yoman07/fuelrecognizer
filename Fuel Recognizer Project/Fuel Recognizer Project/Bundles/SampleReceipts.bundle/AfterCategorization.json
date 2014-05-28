@@ -1,0 +1,58 @@
+{
+    "receipts": {
+        "1": {
+            "total_price_for_gasoline" : "150.06",
+            "price_for_one_liter" : "5.83",
+            "total_amount" : "25.741",
+            "gasoline_name" : "ultimat 98 0000000000 3p"
+        },
+        "3": {
+            "total_price_for_gasoline" : "180.87",
+            "price_for_one_liter" : "5.29",
+            "total_amount" : "34.19",
+            "gasoline_name" : "eurosuper 95 (a)  l"
+        },
+        "4": {
+            "total_price_for_gasoline" : "180.87",
+            "price_for_one_liter" : "5.29",
+            "total_amount" : "34.19",
+            "gasoline_name" : "eurosuper 95 (a)  l"
+        },
+        "5": {
+            "total_price_for_gasoline" : "100.02",
+            "price_for_one_liter" : "5.22",
+            "total_amount" : "19.16",
+            "gasoline_name" : "benzyna bezoł. 95(dyst: 2)"
+        },
+        "6": {
+            "total_price_for_gasoline" : "100.01",
+            "price_for_one_liter" : "5.38",
+            "total_amount" : "18.59",
+            "gasoline_name" : "eurosuper 95  l"
+        },
+        "7": {
+            "total_price_for_gasoline" : "100.19",
+            "price_for_one_liter" : "5.17",
+            "total_amount" : "19.38",
+            "gasoline_name" : "benzyna bezoł. 95(dyst: 2)"
+        },
+        "8": {
+            "total_price_for_gasoline" : "100.00",
+            "price_for_one_liter" : "5.23",
+            "total_amount" : "19.12",
+            "gasoline_name" : "eurosuper 95 (a)  l"
+        },
+        "9": {
+            "total_price_for_gasoline" : "100.41",
+            "price_for_one_liter" : "5.49",
+            "total_amount" : "18.29",
+            "gasoline_name" : "eurosuper 95  l"
+        },
+        "10": {
+            "total_price_for_gasoline" : "100.00",
+            "price_for_one_liter" : "5.42",
+            "total_amount" : "18.45",
+            "gasoline_name" : "eurosuper 95  l"
+        }
+    }
+}

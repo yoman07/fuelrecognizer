@@ -12,6 +12,9 @@
 
 @interface ProductCell : UITableViewCell
 
-@property (nonatomic, strong) ReceiptObject *receiptObject;
+@property (weak, nonatomic) IBOutlet UILabel *productName;
+@property (weak, nonatomic) IBOutlet UILabel *productyQuantityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *valueLabel;
+@property (weak, nonatomic) IBOutlet UILabel *mediumBurning;
 
 @end

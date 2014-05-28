@@ -1,0 +1,21 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, "6.0"
+
+target "Fuel recognizer" do
+
+end
+
+target "FuelLearning" do
+
+pod 'M13CSVParser'
+
+end
+
+target "Fuel recognizer Tests" do
+
+end
+
+target "FuelLearning Tests" do
+
+end
+

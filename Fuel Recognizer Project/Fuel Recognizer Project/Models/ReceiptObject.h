@@ -10,10 +10,10 @@
 
 @interface ReceiptObject : NSObject
 
-@property NSString *name;
-@property CGFloat quantity;
-@property CGFloat totalPrice;
-@property CGFloat price;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic) CGFloat quantity;
+@property (nonatomic) CGFloat totalPrice;
+@property (nonatomic) CGFloat price;
 
 - (id) initWithProductLine:(NSString *)productLine;
 
