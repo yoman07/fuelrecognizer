@@ -21,7 +21,9 @@
 #import "UIImage+Tesseract.h"
 #import "RBFuelEntity.h"
 #import "AppDelegate.h"
+#import "GAI.h"
 #import "ReceiptObject.h"
+#import "GAIDictionaryBuilder.h"
 
 using namespace cv;
 #define kWhiteList @"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ-.,ÓŁ:*%#\\"
@@ -86,7 +88,11 @@ using namespace cv;
 
     // [researchMainClass makeOcrTesting];
     
-
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
     
 
     
@@ -152,10 +158,25 @@ using namespace cv;
 {
     
     if(buttonIndex != actionSheet.cancelButtonIndex){
-        if (buttonIndex == 0)
+        if (buttonIndex == 0) {
             [self.imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
-        else if (buttonIndex == 1)
+            id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+            
+            [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"     // Event category (required)
+                                                                  action:@"choose_photo"  // Event action (required)
+                                                                   label:@"source_camera"          // Event label
+                                                                   value:nil] build]];    // Event value
+        }
+        else if (buttonIndex == 1) {
             [self.imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+            
+            id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+            
+            [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"     // Event category (required)
+                                                                  action:@"choose_photo"  // Event action (required)
+                                                                   label:@"photo_library"          // Event label
+                                                                   value:nil] build]];    // Event value
+        }
         [self presentViewController:self.imagePicker animated:YES completion:nil];
     } else
         [self dismissViewControllerAnimated:YES completion:nil];
@@ -184,9 +205,19 @@ using namespace cv;
     [self.currentImageView setImage:takenImage];
     
     
+    [self.receiptActionButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
+    [self.receiptActionButton setTitleShadowColor:[UIColor clearColor] forState:UIControlStateNormal];
+    [self.receiptActionButton setTitleColor:[UIColor clearColor] forState:UIControlStateHighlighted];
+    [self.receiptActionButton setTitleShadowColor:[UIColor clearColor] forState:UIControlStateHighlighted];
+//    [self.receiptActionButton setImage:[[UIImage alloc] init] forState:UIControlStateNormal
     [self ocrImage:takenImage];
   //  [self ocrImage:takenImage];
 
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.screenName = @"Main Screen";
 }
 
 - (void) ocrImage:(UIImage *)image {
@@ -206,6 +237,14 @@ using namespace cv;
                 self.nameTextField.text = gasolineObject.name;
                 
                 self.priceTextField.text = [NSString stringWithFormat:@"%.2f", gasolineObject.totalPrice];
+                
+                id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+                
+                [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"     // Event category (required)
+                                                                      action:@"image_process"  // Event action (required)
+                                                                       label:@"done"          // Event label
+                                                                       value:nil] build]];    // Event value
+
             });
             
         }
@@ -214,6 +253,12 @@ using namespace cv;
 
 - (IBAction)startCamera:(id)sender {
 
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    
+    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"     // Event category (required)
+                                                          action:@"button_press"  // Event action (required)
+                                                           label:@"start_camera"          // Event label
+                                                           value:nil] build]];    // Event value
         if(![sender isSelected]) {
             self.currentImageView = self.resultImageView;
 
@@ -335,6 +380,9 @@ using namespace cv;
     self.amountTextField.text = @"";
 
         [self.view endEditing:YES];
+}
+-(void)dismissKeyboard {
+    [self.view endEditing:YES];
 }
 
 

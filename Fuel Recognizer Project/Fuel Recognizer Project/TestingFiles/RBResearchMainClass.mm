@@ -64,7 +64,7 @@ typedef cv::Mat (^MatBlock)(cv::Mat res);
                               },
 //
                               ^(cv::Mat mat){ // I swipe this after test
-                                  mat = findContoursAndCrop(mat);
+                                  //mat = findContoursAndCrop(mat);
                                   mat = findBoxes(mat, mat);
                                   return mat;
                               },

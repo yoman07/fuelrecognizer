@@ -8,7 +8,7 @@ end
 target "FuelLearning" do
 
 pod 'M13CSVParser'
-
+pod 'TPKeyboardAvoiding'
 end
 
 target "Fuel recognizer Tests" do

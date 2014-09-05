@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
-@interface G8ViewController : UIViewController
+@interface G8ViewController : GAITrackedViewController <UITextFieldDelegate>
 
 @end

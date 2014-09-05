@@ -9,6 +9,8 @@
 #import "RBHistoryTableViewController.h"
 #import "AppDelegate.h"
 #import "RBFuelEntity.h"
+#import "GAI.h"
+#import "GAIDictionaryBuilder.h"
 #import "ProductCell.h"
 @interface RBHistoryTableViewController ()
 
@@ -44,6 +46,14 @@
     // Fetching Records and saving it in "fetchedRecordsArray" object
     self.fetchedRecordsArray = [appDelegate getAllReceipts];
     [self reloadData];
+    
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    
+    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"table_view"     // Event category (required)
+                                                          action:@"screen_Show"  // Event action (required)
+                                                           label:@"show_results"          // Event label
+                                                           value:nil] build]];    // Event value
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
